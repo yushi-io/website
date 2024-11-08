@@ -1,101 +1,23 @@
-/* Reset some default styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Basic Body Styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #000000;
-    margin: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Header Styling */
-h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #333;
-}
-
-/* Paragraphs */
-p {
-    margin-bottom: 1em;
-    color: #666;
-}
-
-/* Links */
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Lists */
-ul, ol {
-    margin: 20px;
-    padding: 0;
-    list-style-position: inside;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* Centered Container*/
-
+/* Centering container */
 .container-wrapper {
     display: flex;
-    align-items: center; /* Centers vertically */
-    justify-content: center; /* Centers horizontally */
-    height: 100vh; /* Full viewport height */
-  }
-
-
-/* Buttons */
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-/* Container */
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
     padding: 20px;
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 10px;
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 20px;
-}
-
-/* Image */
-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
 }
