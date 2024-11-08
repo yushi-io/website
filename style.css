@@ -48,6 +48,16 @@ li {
     margin-bottom: 8px;
 }
 
+/* Centered Container*/
+
+.container-wrapper {
+    display: flex;
+    align-items: center; /* Centers vertically */
+    justify-content: center; /* Centers horizontally */
+    height: 100vh; /* Full viewport height */
+  }
+
+
 /* Buttons */
 button {
     background-color: #007bff;
