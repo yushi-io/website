@@ -1,0 +1,78 @@
+{
+  "color": {
+    "primary": {
+      "value": "#000000"
+    },
+    "secondary": {
+      "value": "#666666"
+    },
+    "accent": {
+      "value": "#ff0000"
+    },
+    "background": {
+      "value": "#ffffff"
+    }
+  },
+  "typography": {
+    "h1": {
+      "mast": {
+        "fontFamily": {
+          "value": "Helvetica Neue"
+        },
+        "fontWeight": {
+          "value": "700"
+        },
+        "fontSize": {
+          "value": "36px"
+        },
+        "lineHeight": {
+          "value": "44px"
+        }
+      },
+      "sectionTitle": {
+        "fontFamily": {
+          "value": "Helvetica Neue"
+        },
+        "fontWeight": {
+          "value": "600"
+        },
+        "fontSize": {
+          "value": "28px"
+        },
+        "lineHeight": {
+          "value": "36px"
+        }
+      }
+    },
+    "body": {
+      "base": {
+        "fontFamily": {
+          "value": "Helvetica Neue"
+        },
+        "fontWeight": {
+          "value": "400"
+        },
+        "fontSize": {
+          "value": "16px"
+        },
+        "lineHeight": {
+          "value": "24px"
+        }
+      },
+      "big": {
+        "fontFamily": {
+          "value": "Helvetica Neue"
+        },
+        "fontWeight": {
+          "value": "400"
+        },
+        "fontSize": {
+          "value": "18px"
+        },
+        "lineHeight": {
+          "value": "28px"
+        }
+      }
+    }
+  }
+}
