@@ -9,12 +9,14 @@
   value='';
 }">
 <script>
-i.socket=new WebSocket(
-  'wss://api.openai.com/v1/realtime?model=gpt-realtime-2.1',
-  ['realtime','openai-insecure-api-key.'+prompt()]
-);
-i.socket.onmessage=function(event){
-  if(JSON.parse(event.data).type=='response.output_text.done')
-    l.textContent+=JSON.parse(event.data).text+'\n';
-};
+let token = new URLSearchParams(location.hash.slice(1)).get('token')?.trim();
+if (!token) token = prompt()?.trim();
+if (token) {
+  i.socket = new WebSocket('wss://api.openai.com/v1/realtime?model=gpt-realtime-2.1',
+    ['realtime', 'openai-insecure-api-key.' + token]);
+  i.socket.onmessage = function(event) {
+    const reply = JSON.parse(event.data);
+    if (reply.type === 'response.output_text.done') l.textContent += reply.text + '\n';
+  };
+}
 </script>
