@@ -1,0 +1,20 @@
+<pre id=l></pre>
+<input id=i onkeydown="if(event.key=='Enter' && i.socket?.readyState===WebSocket.OPEN){
+  l.textContent+=value+'\n';
+  i.socket.send(JSON.stringify({
+    type:'conversation.item.create',
+    item:{type:'message',role:'user',content:[{type:'input_text',text:value}]}
+  }));
+  i.socket.send(JSON.stringify({type:'response.create',response:{output_modalities:['text']}}));
+  value='';
+}">
+<script>
+i.socket=new WebSocket(
+  'wss://api.openai.com/v1/realtime?model=gpt-realtime-2.1',
+  ['realtime','openai-insecure-api-key.'+prompt()]
+);
+i.socket.onmessage=function(event){
+  if(JSON.parse(event.data).type=='response.output_text.done')
+    l.textContent+=JSON.parse(event.data).text+'\n';
+};
+</script>
